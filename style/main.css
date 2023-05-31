@@ -1,0 +1,130 @@
+:root{
+  --black: #303841;
+  --dark: #3A4750;
+  --yellow: #F6C90E;
+  --grey: #EEEEEE;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*, header{
+  font-family: 'Montserrat', sans-serif;
+}
+header{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  top: 0;
+  background-color: var(--black);
+  color: var(--grey);
+  position: sticky;
+  z-index: 2;
+  left: 0;
+  right: 0;
+}
+.menu{
+  padding: 20px;
+}
+.logo{
+  font-size: 0.5cm;
+}
+.progress{
+  position: static;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 5px;
+}
+.bar{
+  display: block;
+  width: 0;
+  height: inherit;
+  background-image: linear-gradient(90deg,#a48815,#e3bf29,#fff100);
+}
+
+.baner{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position:static;
+  padding: 0;
+  object-fit: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+/*video*/
+.video{
+  min-width: 100%;
+}
+
+/* main */
+
+      /* karty */
+.topics{
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--dark);
+  padding: 40px;
+  height: auto;
+  position: static;
+  flex-wrap: wrap;
+}
+.topic{
+  height: 400px;
+  background-color: var(--yellow);
+  width: 300px;
+  margin: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: static;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+}
+.topic {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.topic.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.icon {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transition: transform 2s;
+}
+
+.topic1:hover > .holowanie {
+  animation: spin 1s forwards;
+}
+.topic2:hover > .parasolka {
+  animation: spin 1s forwards;
+}
+.topic3:hover > .pamelka {
+  animation: spin 1s forwards;
+}
+@keyframes spin {
+  0% {
+    transform: perspective(500px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(500px) rotateY(360deg);
+  }
+}
+.description{
+  color: var(--grey);
+  padding: 40px;
+}

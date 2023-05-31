@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/main.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="menu">
+                <div class="logo">
+                <p>LOGO</p>
+                </div>
+            </div>
+            <div class="progress">
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="baner">
+            <video autoplay muted loop class="video">
+                <source src="./media/Untitled.mov" type="video/mp4">
+            </video>
+        </div>
+        <div class="topics">
+            <div class="topic topic1">
+                <div class="icon holowanie">
+                    <img src="./ikonki/drawing1.svg" alt="">
+                </div>
+                <div class="description">
+                    <p>STYLE HOLOWANIA</p>
+                </div>
+            </div>
+            <div class="topic topic2">
+                <div class="icon parasolka">
+                    <img src="./ikonki/parasolka2.svg" alt="">
+                </div>
+                <div class="description">
+                    <p>EDUKACJA</p>
+                </div>
+            </div>
+            <div class="topic topic3">
+                <div class="icon pamelka">
+                    <img src="./ikonki/pamlka2.svg"  alt="">
+                </div>
+                <div class="description">
+                    <p>SPRZĘT</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        window.addEventListener('scroll', function() {
+            var topics = document.querySelectorAll('.topic');
+        
+            for (var i = 0; i < topics.length; i++) {
+            var topic = topics[i];
+            var position = topic.getBoundingClientRect().top;
+        
+            if (position < window.innerHeight) {
+                topic.classList.add('visible');
+            }
+            }
+        });
+        
+
+
+        //progress bar
+        const body = document.body;
+        const bar = document.querySelector(".bar");
+        const Update = () =>{
+            let scroll = (window.scrollY/(body.scrollHeight - window.innerHeight))*100;
+            bar.style.width = `${scroll}%`;
+            requestAnimationFrame(Update);
+        };
+        Update();
+    </script>
+</body>
+</html>
