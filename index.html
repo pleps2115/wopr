@@ -10,16 +10,62 @@
 </head>
 <body>
     <header>
-        <div class="nav">
-            <div class="menu">
+        <nav class="main-header">
+            <input type="checkbox" name="" id="check-button">
+            <div class="container-header">
                 <div class="logo">
-                <p>LOGO</p>
+                    <p class="logo-text">
+                        WOPR
+                    </p>
                 </div>
+                <label for="check-button">
+                    <div class="menu-button">
+                        <p class="line move-right"></p>
+                        <p class="line move-left"></p>
+                        <p class="line move-right"></p>
+                    </div>
+                </label>
+            </div>
+            <div class="menu">
+                <label for="check-button" class="overlay">
+                    <div class="overlay-menu-button">
+                        <p class="x-mark">&#10005;</p>
+                    </div>
+                </label>
+                <ul class="menu-list">
+                    <li class="menu-element temat1">
+                        <label for="temat1-button">
+                            <p>
+                                Techniki
+                            </p>
+                        </label>
+                    </li>
+                    <li class="menu-element temat2">
+                        <label for="temat2-button">
+                            <p>
+                                Sprzęt
+                            </p>
+                        </label>
+                    </li>
+                    <li class="menu-element home-li">
+                        <a href="" class="home">WOPR</a>
+                    </li>
+                    <li class="menu-element temat3">
+                        <a href="./Źródła/">
+                            Bezpieczeństwo
+                        </a>
+                    </li>
+                    <li class="menu-element">
+                        <a href="./Contact/" class="contact">
+                            Kontakt
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div class="progress">
                 <span class="bar"></span>
             </div>
-        </div>
+        </nav>
     </header>
     <main>
         <div class="baner">
@@ -53,32 +99,10 @@
                 </div>
             </div>
         </div>
+        
+
+        <div class="toTopButton"><img src="./ikonki/strzalka.svg" width="40" alt=""></div>
     </main>
-    <script>
-        window.addEventListener('scroll', function() {
-            var topics = document.querySelectorAll('.topic');
-        
-            for (var i = 0; i < topics.length; i++) {
-            var topic = topics[i];
-            var position = topic.getBoundingClientRect().top;
-        
-            if (position < window.innerHeight) {
-                topic.classList.add('visible');
-            }
-            }
-        });
-        
-
-
-        //progress bar
-        const body = document.body;
-        const bar = document.querySelector(".bar");
-        const Update = () =>{
-            let scroll = (window.scrollY/(body.scrollHeight - window.innerHeight))*100;
-            bar.style.width = `${scroll}%`;
-            requestAnimationFrame(Update);
-        };
-        Update();
-    </script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
