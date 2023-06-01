@@ -3,7 +3,6 @@
 window.onscroll = function(){
     let YscrollAxis = document.documentElement.scrollTop;
     let YscrollAxis2 = document.body.scrollTop;
-    document.querySelector(".description").textContent=YscrollAxis;
     let topBtn = document.querySelector(".toTopButton");
     if(YscrollAxis>200 || YscrollAxis2 >200){
         topBtn.style.display = "block";
@@ -20,6 +19,8 @@ topBtn.addEventListener("click",_=>{
 
 
 //progress bar
+
+
 const body = document.body;
 const bar = document.querySelector(".bar");
 const Update = () =>{
