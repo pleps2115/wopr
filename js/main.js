@@ -32,14 +32,20 @@ Update();
 
 //karty
 window.addEventListener('scroll', function() {
-    var topics = document.querySelectorAll('.topic');
+    let topics = document.querySelectorAll('.topic');
 
-    for (var i = 0; i < topics.length; i++) {
-    var topic = topics[i];
-    var position = topic.getBoundingClientRect().top;
+    for (let i = 0; i < topics.length; i++) {
+        (function(index) {
+            let topic = topics[index];
+            let position = topic.getBoundingClientRect().top;
+            let windowHeight = window.innerHeight;
 
-    if (position < window.innerHeight) {
-        topic.classList.add('visible');
-    }
+            if (position < windowHeight - topic.offsetHeight) {
+                setTimeout(function() {
+                    topic.classList.add('visible');
+                }, index * 200); // Opóźnienie animacji w milisekundach
+            }
+        })(i);
     }
 });
+
