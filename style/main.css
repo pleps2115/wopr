@@ -308,7 +308,44 @@ header{
   color: var(--grey);
   padding: 40px;
 }
-
+.holowanie{
+  background-color: var(--grey);
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.holowanie>.element{
+  background-color: var(--yellow);
+  margin: 50px;
+  border-radius: 10px;
+  padding: 20px;
+  color: var(--grey);
+  width: 70%;
+  display: flex;
+}
+.holowanie>.styl2{
+  margin-left: auto;
+}
+.sprzet{
+  background-color: var(--dark);
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sprzet>.element{
+  background-color: var(--grey);
+  margin: 50px;
+  border-radius: 10px;
+  padding: 20px;
+  color: var(--black);
+  width: 70%;
+  display: flex;
+}
+.sprzet>.styl1,.sprzet>.styl3{
+  margin-left: auto;
+}
 .toTopButton{
   position: fixed;
   bottom: 10px;
