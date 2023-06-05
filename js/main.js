@@ -28,7 +28,7 @@ function backToTop() {
 //progress bar
 
 const body = document.body;
-const bar = document.querySelector(".progress-bar-container");
+const bar = document.querySelector(".bar");
 const Update = () => {
   let scroll =
     (window.scrollY / (body.scrollHeight - window.innerHeight)) * 100;
