@@ -13,6 +13,12 @@ header {
   list-style: none;
   text-decoration: none;
 }
+* {
+  cursor: url("../icons/kursor1.svg"), auto !important;
+}
+*:active {
+  cursor: url("../icons/kursor2.svg"), auto !important;
+}
 
 header {
   position: sticky;
@@ -65,7 +71,7 @@ header {
 
 .menu-element > a,
 .menu-element > label {
-  color: aliceblue !important;
+  color: white !important;
   font-weight: 700;
   cursor: pointer;
   text-align: center;
@@ -219,7 +225,7 @@ header {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--black);
+    background-color: var(--yellow);
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
     margin: 0;
@@ -270,6 +276,11 @@ header {
 
   .home {
     font-size: medium;
+  }
+  /* Do poprawy, bo nie działa */
+  .back-to-top-button {
+    left: 25px;
+    top: 25px;
   }
 }
 
@@ -338,15 +349,15 @@ header {
   height: 100%;
 }
 
-.topic1:hover > .holowanie {
+.topic1:hover > .icon-holowanie {
   animation: spin 1s forwards;
 }
 
-.topic2:hover > .parasolka {
+.topic2:hover > .icon-parasolka {
   animation: spin 1s forwards;
 }
 
-.topic3:hover > .pamelka {
+.topic3:hover > .icon-pamelka {
   animation: spin 1s forwards;
 }
 
@@ -410,8 +421,8 @@ header {
 }
 
 .back-to-top-button {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   position: absolute;
   right: 50px;
   bottom: 50px;
@@ -419,13 +430,6 @@ header {
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s ease-in-out;
-}
-
-/* footer */
-@keyframes logo-animation {
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 footer {
@@ -460,7 +464,15 @@ footer {
   border-radius: 60%;
 }
 
-.odnosniki a:hover {
-  cursor: pointer;
-  animation: logo-animation 1s;
+.odnosniki a {
+  transition: background-color 0.3s ease-in-out;
 }
+
+.dsc-icon:hover {
+  background-color: #7289da;
+}
+
+/* .dsc-icon:hover::after {
+  content: "";
+  width: ;
+} */

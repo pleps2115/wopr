@@ -25,8 +25,7 @@ function backToTop() {
   document.documentElement.scrollTop = 0;
 }
 
-//progress bar
-
+// progress bar
 const body = document.body;
 const bar = document.querySelector(".bar");
 const Update = () => {
@@ -37,7 +36,7 @@ const Update = () => {
 };
 Update();
 
-//karty
+// karty
 window.addEventListener("scroll", function () {
   let topics = document.querySelectorAll(".topic");
 
