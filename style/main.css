@@ -4,6 +4,7 @@
   --yellow: #f6c90e;
   --grey: #eeeeee;
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 *,
 header {
@@ -12,13 +13,15 @@ header {
   list-style: none;
   text-decoration: none;
 }
+
 header {
   position: sticky;
   top: 0;
   z-index: 999;
   height: fit-content;
 }
-.progress {
+
+.progress-bar-container {
   position: static;
   top: 0;
   left: 0;
@@ -27,6 +30,7 @@ header {
   height: 5px;
   background-color: var(--black);
 }
+
 .bar {
   display: block;
   width: 0;
@@ -41,6 +45,7 @@ header {
   height: 100%;
   top: 0;
 }
+
 .menu {
   display: flex;
   justify-content: center;
@@ -50,15 +55,17 @@ header {
   z-index: 2;
   background-color: var(--black);
 }
+
 .menu-list {
   margin: 0;
   display: flex;
   justify-content: space-between;
   width: 90%;
 }
+
 .menu-element > a,
 .menu-element > label {
-  color: aliceblue;
+  color: aliceblue !important;
   font-weight: 700;
   cursor: pointer;
   text-align: center;
@@ -73,6 +80,7 @@ header {
   position: relative;
   width: 10%;
 }
+
 .menu-element::after {
   content: "";
   position: absolute;
@@ -85,13 +93,16 @@ header {
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
+
 .menu-element:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
 .home {
   font-size: xx-large;
 }
+
 .home-li {
   width: fit-content;
 }
@@ -113,12 +124,15 @@ header {
     opacity: 1;
   }
 }
+
 .x-mark {
   color: var(--grey);
 }
+
 .container-header {
   display: none;
 }
+
 .line {
   display: block;
   position: relative;
@@ -130,42 +144,52 @@ header {
   transform-origin: 0 0;
   transition: 0.4s;
 }
+
 .menu-button {
   display: none;
 }
+
 #check-button {
   display: none;
 }
+
 .overlay-menu-button {
   display: none;
 }
+
 @media (max-width: 842px) {
   @keyframes xmark {
     100% {
       transform: rotate(360deg);
     }
   }
+
   .main-header {
     background-color: var(--black);
   }
+
   .menu-button {
     display: block;
     z-index: 3;
   }
+
   .overlay-menu-button {
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
   }
+
   .overlay {
     display: flex;
     justify-content: flex-end;
     margin: 20px 20px 0px 0px;
   }
+
   .menu {
     display: none;
   }
+
   .container-header {
     display: flex;
     justify-content: space-between;
@@ -173,16 +197,20 @@ header {
     position: static;
     padding: 20px;
   }
+
   .logo {
     color: white;
     font-size: x-large;
   }
+
   .menu-button:hover > .move-left {
     transform: translateX(-1vw);
   }
+
   .menu-button:hover > .move-right {
     transform: translateX(0.5vw);
   }
+
   #check-button:checked ~ .menu {
     transition: animation 2s;
     display: flex;
@@ -196,9 +224,11 @@ header {
     animation: fadeIn 1s;
     margin: 0;
   }
+
   body:has(#check-button:checked) {
     overflow: hidden;
   }
+
   .menu-list {
     position: relative;
     display: flex;
@@ -210,34 +240,40 @@ header {
     list-style: none;
     text-align: center;
   }
+
   .menu-element {
     display: block;
     width: 100%;
     position: relative;
     padding: 20px 30px 30px 30px;
   }
+
   .menu-element::after {
     width: 0%;
   }
+
   .menu-element:hover {
     transform: scale(1);
   }
+
   .temat2-menu li:hover {
     background-color: transparent;
   }
+
   .element-temat2:nth-child(3) {
     padding-bottom: 0;
   }
+
   .x-mark:hover {
     animation: xmark 0.7s;
   }
+
   .home {
     font-size: medium;
   }
 }
 
 /* main */
-
 .baner {
   display: flex;
   width: 100%;
@@ -246,9 +282,10 @@ header {
   padding: 0;
   object-fit: cover;
 }
-/*video*/
+
 .video {
   min-width: 100%;
+  box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.5);
 }
 
 /* karty */
@@ -260,6 +297,7 @@ header {
   position: static;
   flex-wrap: wrap;
 }
+
 .topic {
   height: 400px;
   background-color: var(--yellow);
@@ -274,6 +312,7 @@ header {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
   border: #eeeeee solid 8px;
 }
+
 .topic {
   opacity: 0;
   transform: translateY(50px);
@@ -284,24 +323,33 @@ header {
   opacity: 1;
   transform: translateY(0);
 }
+
 .icon {
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
   display: flex;
   justify-content: center;
   transform-style: preserve-3d;
   transition: transform 2s;
 }
 
+.icon img {
+  width: 100%;
+  height: 100%;
+}
+
 .topic1:hover > .holowanie {
   animation: spin 1s forwards;
 }
+
 .topic2:hover > .parasolka {
   animation: spin 1s forwards;
 }
+
 .topic3:hover > .pamelka {
   animation: spin 1s forwards;
 }
+
 @keyframes spin {
   0% {
     transform: perspective(500px) rotateY(0deg);
@@ -310,10 +358,12 @@ header {
     transform: perspective(500px) rotateY(360deg);
   }
 }
+
 .description {
   color: var(--grey);
   padding: 40px;
 }
+
 .holowanie {
   background-color: var(--grey);
   padding: 100px;
@@ -321,6 +371,7 @@ header {
   flex-direction: column;
   justify-content: center;
 }
+
 .holowanie > .element {
   background-color: var(--yellow);
   margin: 50px;
@@ -330,9 +381,11 @@ header {
   width: 70%;
   display: flex;
 }
+
 .holowanie > .styl2 {
   margin-left: auto;
 }
+
 .sprzet {
   background-color: var(--dark);
   padding: 100px;
@@ -340,6 +393,7 @@ header {
   flex-direction: column;
   justify-content: center;
 }
+
 .sprzet > .element {
   background-color: var(--grey);
   margin: 50px;
@@ -349,16 +403,22 @@ header {
   width: 70%;
   display: flex;
 }
+
 .sprzet > .styl1,
 .sprzet > .styl3 {
   margin-left: auto;
 }
-.toTopButton {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  display: none;
-  cursor: pointer;
+
+.back-to-top-button {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
 }
 
 /* footer */
@@ -367,6 +427,7 @@ header {
     transform: rotate(360deg);
   }
 }
+
 footer {
   padding: 10px;
   background: linear-gradient(112deg, var(--black), var(--dark), #676660);
@@ -375,6 +436,7 @@ footer {
   justify-content: center;
   flex-direction: column;
 }
+
 .footer-opis {
   font-size: large;
   display: flex;
@@ -382,11 +444,13 @@ footer {
   color: white;
   margin-top: 10px;
 }
+
 .odnosniki {
   display: flex;
   justify-content: center;
   padding: 10px;
 }
+
 .odnosniki a {
   display: flex;
   align-items: center;
@@ -395,6 +459,7 @@ footer {
   padding: 10px;
   border-radius: 60%;
 }
+
 .odnosniki a:hover {
   cursor: pointer;
   animation: logo-animation 1s;

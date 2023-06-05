@@ -1,25 +1,34 @@
-//to top button
+// Back to top button
+const button = document.querySelector(".back-to-top-button");
 
-window.onscroll = function () {
-  let YscrollAxis = document.documentElement.scrollTop;
-  let YscrollAxis2 = document.body.scrollTop;
-  let topBtn = document.querySelector(".toTopButton");
-  if (YscrollAxis > 200 || YscrollAxis2 > 200) {
-    topBtn.style.display = "block";
-  } else {
-    topBtn.style.display = "none";
-  }
+window.onscroll = () => {
+  showButtonOnScroll();
 };
-let topBtn = document.querySelector(".toTopButton");
-topBtn.addEventListener("click", (_) => {
-  window.scrollBy(0, -1 * document.documentElement.scrollTop);
-  window.scrollBy(0, -1 * document.body.scrollTop);
-});
+
+function showButtonOnScroll() {
+  if (
+    document.body.scrollTop > 300 ||
+    document.documentElement.scrollTop > 300
+  ) {
+    button.style.visibility = "visible";
+    button.style.opacity = "1";
+  } else {
+    button.style.opacity = "0";
+    button.style.visibility = "hidden";
+  }
+}
+
+button.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
 //progress bar
 
 const body = document.body;
-const bar = document.querySelector(".bar");
+const bar = document.querySelector(".progress-bar-container");
 const Update = () => {
   let scroll =
     (window.scrollY / (body.scrollHeight - window.innerHeight)) * 100;

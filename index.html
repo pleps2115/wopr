@@ -4,7 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Ratownictwo wodne</title>
+    <!-- Bootstrap links -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="./style/reset.css" />
     <link rel="stylesheet" href="./style/main.css" />
   </head>
@@ -32,23 +48,23 @@
           </label>
           <ul class="menu-list">
             <li class="menu-element temat1">
-              <a> Techniki </a>
+              <a>Techniki</a>
             </li>
             <li class="menu-element temat2">
-              <a> Sprzęt </a>
+              <a>Sprzęt</a>
             </li>
             <li class="menu-element home-li">
-              <a href="" class="home">WOPR</a>
+              <a href="/" class="home">WOPR</a>
             </li>
             <li class="menu-element temat3">
-              <a href="./Źródła/"> Bezpieczeństwo </a>
+              <a>Bezpieczeństwo</a>
             </li>
             <li class="menu-element">
-              <a href="./Contact/" class="contact"> Kontakt </a>
+              <a class="contact">Kontakt</a>
             </li>
           </ul>
         </div>
-        <div class="progress">
+        <div class="progress-bar-container">
           <span class="bar"></span>
         </div>
       </nav>
@@ -56,13 +72,13 @@
     <main>
       <div class="baner">
         <video autoplay muted loop class="video">
-          <source src="./media/Untitled.mov" type="video/mp4" />
+          <source src="./media/Drone-Movie.mov" type="video/mp4" />
         </video>
       </div>
       <div class="topics">
         <div class="topic topic1">
           <div class="icon icon-holowanie">
-            <img src="./ikonki/drawing1.svg" alt="" />
+            <img src="./icons/drawing1.svg" alt="" />
           </div>
           <div class="description">
             <p>STYLE HOLOWANIA</p>
@@ -70,7 +86,7 @@
         </div>
         <div class="topic topic2">
           <div class="icon icon-parasolka">
-            <img src="./ikonki/parasolka2.svg" alt="" />
+            <img src="./icons/parasolka2.svg" alt="" />
           </div>
           <div class="description">
             <p>EDUKACJA</p>
@@ -78,7 +94,7 @@
         </div>
         <div class="topic topic3">
           <div class="icon icon-pamelka">
-            <img src="./ikonki/pamlka2.svg" alt="" />
+            <img src="./icons/pamlka2.svg" alt="" />
           </div>
           <div class="description">
             <p>SPRZĘT</p>
@@ -86,7 +102,7 @@
         </div>
       </div>
       <div class="holowanie" id="holowanie">
-        <div class="element styl1">
+        <div class="element styl1 shadow">
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda
             ipsam dolor earum consequuntur esse cumque fugit! Quam temporibus
@@ -94,7 +110,7 @@
             reprehenderit cumque quia quo.
           </p>
         </div>
-        <div class="element styl2">
+        <div class="element styl2 shadow">
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quos
             natus beatae harum quaerat ea nulla suscipit excepturi, blanditiis,
@@ -102,7 +118,7 @@
             ullam officia.
           </p>
         </div>
-        <div class="element styl3">
+        <div class="element styl3 shadow">
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Consectetur nisi ipsam deleniti, nemo soluta incidunt veritatis
@@ -137,14 +153,20 @@
           </p>
         </div>
       </div>
-      <div class="toTopButton">
-        <img src="./ikonki/strzalka.svg" width="40" alt="" />
+      <!-- Back to top button -->
+      <div class="d-flex justify-content-end fixed-bottom">
+        <button
+          type="button"
+          class="back-to-top-button btn btn-warning rounded-circle"
+        >
+          <i class="bi bi-arrow-up"></i>
+        </button>
       </div>
     </main>
     <footer>
       <div class="odnosniki">
         <a
-          href="https://github.com/kacperJakubowski/Extensioner"
+          href="https://github.com/pleps2115/wopr"
           target="_blank"
           title="Repozytorium"
         >
