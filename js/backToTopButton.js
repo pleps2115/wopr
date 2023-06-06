@@ -1,3 +1,7 @@
+// Homepage scroll
+const homepageLink = document.querySelector("#homepage");
+homepageLink.addEventListener("click", backToTop);
+
 // Back to top button
 const button = document.querySelector(".back-to-top-button");
 

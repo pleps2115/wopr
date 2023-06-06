@@ -42,7 +42,7 @@ temat11.addEventListener("click", (_) => {
 
 // topic2 przeniesienie
 let temat2 = document.querySelector(".topic2");
-let temat22 = document.querySelector(".temat3");
+let temat22 = document.querySelector(".temat2");
 let wezly = document.querySelector(".wezly-container");
 
 temat2.addEventListener("click", (_) => {
@@ -54,7 +54,7 @@ temat22.addEventListener("click", (_) => {
 
 // topic3 przeniesienie
 let temat3 = document.querySelector(".topic3");
-let temat33 = document.querySelector(".temat2");
+let temat33 = document.querySelector(".temat3");
 let sprzet = document.querySelector(".sprzet-container");
 
 temat3.addEventListener("click", (_) => {

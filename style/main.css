@@ -50,6 +50,7 @@ header {
     transform: translateX(0);
   }
 }
+
 .logo:hover {
   animation: shake 1s;
 }
@@ -96,12 +97,14 @@ header {
   width: 90%;
 }
 
-.menu-element > a,
+.menu-element > button,
 .menu-element > label {
   color: white !important;
   font-weight: 700;
   cursor: pointer;
   text-align: center;
+  background: none;
+  border: none;
 }
 
 .menu-element {
@@ -124,6 +127,7 @@ header {
   left: 0;
   background-color: var(--yellow);
   transform-origin: bottom right;
+  will-change: transform;
   transition: transform 0.25s ease-out;
 }
 
@@ -484,26 +488,32 @@ header {
 .sprzet1:focus > .card {
   transform: rotateY(180deg);
 }
+
 .sprzet2:hover > .card,
 .sprzet2:focus > .card {
   transform: rotateY(180deg);
 }
+
 .sprzet3:hover > .card,
 .sprzet3:focus > .card {
   transform: rotateY(180deg);
 }
+
 .sprzet4:hover > .card,
 .sprzet4:focus > .card {
   transform: rotateY(180deg);
 }
+
 .sprzet5:hover > .card,
 .sprzet5:focus > .card {
   transform: rotateY(180deg);
 }
+
 .sprzet6:hover > .card,
 .sprzet6:focus > .card {
   transform: rotateY(180deg);
 }
+
 .front,
 .back {
   position: absolute;
@@ -520,18 +530,22 @@ header {
   color: var(--grey);
   padding: 20px;
 }
+
 .back {
   transform: rotateY(180deg);
   background-color: var(--dark);
 }
+
 .back-header {
   font-size: 2rem;
   margin-bottom: 30px;
 }
+
 .back-description {
   text-align: justify;
   font-size: 1rem;
 }
+
 .front > .icon {
   width: 230px;
   height: 230px;
