@@ -447,10 +447,15 @@ header {
 /* sprzęt */
 .sprzet-container {
   background-color: var(--grey);
-  padding: 40px;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+}
+.part {
+  display: flex;
   justify-content: space-around;
+  padding: 40px;
+  flex-wrap: wrap;
 }
 
 .sprzet-element {
