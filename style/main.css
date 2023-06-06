@@ -9,7 +9,7 @@
 *,
 header {
   font-family: "Montserrat", sans-serif;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important; 
   list-style: none;
   text-decoration: none;
 }
@@ -18,6 +18,9 @@ header {
 }
 *:active {
   cursor: url("../icons/kursor2.svg"), auto !important;
+}
+body{
+  scroll-behavior: smooth !important;
 }
 
 header {
@@ -375,6 +378,7 @@ header {
   padding: 40px;
 }
 
+        /* holowanie */
 .holowanie {
   background-color: var(--grey);
   padding: 100px;
@@ -396,8 +400,8 @@ header {
 .holowanie > .styl2 {
   margin-left: auto;
 }
-
-.sprzet {
+        /* wezły */
+.wezly {
   background-color: var(--dark);
   padding: 100px;
   display: flex;
@@ -405,20 +409,48 @@ header {
   justify-content: center;
 }
 
-.sprzet > .element {
+.wezly > .element {
   background-color: var(--grey);
   margin: 50px;
   border-radius: 10px;
   padding: 20px;
-  color: var(--black);
+  color: black;
   width: 70%;
   display: flex;
 }
 
-.sprzet > .styl1,
-.sprzet > .styl3 {
+.wezly > .wezel2 {
   margin-left: auto;
 }
+
+
+        /* sprzęt */
+.sprzet-container {
+  background-color: var(--grey);
+  padding: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sprzet-element{
+  height: 500px;
+  background-color: var(--dark);
+  width: 400px;
+  margin: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: static;
+  flex-direction: column;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  border: #eeeeee solid 8px;
+}
+.sprzet-element>.icon{
+  width: 175px;
+  height: 175px;
+}
+
 
 .back-to-top-button {
   width: 70px;

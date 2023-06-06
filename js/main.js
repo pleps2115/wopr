@@ -59,13 +59,13 @@ window.addEventListener("scroll", function () {
 let temat1 = document.querySelector(".topic1");
 let holowanie = document.querySelector(".holowanie");
 
-temat1.addEventListener("click", (_) => {
+temat1.addEventListener("click", _=> {
   holowanie.scrollIntoView({ behavior: "smooth" });
 });
 // topic3 przeniesienie
 let temat3 = document.querySelector(".topic3");
-let sprzet = document.querySelector(".sprzet");
+let sprzet = document.querySelector(".sprzet-container");
 
-temat3.addEventListener("click", (_) => {
+temat3.addEventListener("click", _=> {
   sprzet.scrollIntoView({ behavior: "smooth" });
 });
