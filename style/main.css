@@ -434,17 +434,32 @@ header {
 }
 .sprzet-element{
   height: 500px;
-  background-color: var(--dark);
+  background-color: transparent;
   width: 400px;
   margin: 20px;
   border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: static;
-  flex-direction: column;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
   border: #eeeeee solid 8px;
+  perspective: 1000px;
+}
+.card{
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+}
+.sprzet-element:hover > .card{
+  transform: rotateY(180deg);
+}
+.front, .back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  background-color: var(--dark);
 }
 .sprzet-element>.icon{
   width: 175px;
