@@ -1,0 +1,90 @@
+.social-media-links {
+  background: linear-gradient(112deg, var(--black), var(--dark), #676660);
+}
+
+.github-icon,
+.dsc-icon {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.github-icon:hover,
+.github-icon:focus {
+  background-color: #333;
+}
+
+.dsc-icon:hover,
+.dsc-icon:focus {
+  background-color: #5865f2;
+}
+
+@property --blueIG {
+  syntax: "<color>";
+  initial-value: transparent;
+  inherits: false;
+}
+
+@property --purpleIG {
+  syntax: "<color>";
+  initial-value: transparent;
+  inherits: false;
+}
+
+@property --redIG {
+  syntax: "<color>";
+  initial-value: transparent;
+  inherits: false;
+}
+
+@property --orangeIG {
+  syntax: "<color>";
+  initial-value: transparent;
+  inherits: false;
+}
+
+@property --yellowIG {
+  syntax: "<color>";
+  initial-value: transparent;
+  inherits: false;
+}
+
+@property --yellow_toIG {
+  syntax: "<color>";
+  initial-value: transparent;
+  inherits: false;
+}
+
+.ig-icon {
+  background: linear-gradient(
+    var(--blueIG),
+    var(--purpleIG),
+    var(--redIG),
+    var(--orangeIG),
+    var(--yellowIG),
+    var(--yellow_toIG)
+  );
+  transition: --blueIG 0.3s ease-in-out, --purpleIG 0.3s ease-in-out,
+    --redIG 0.3s ease-in-out, --orangeIG 0.3s ease-in-out,
+    --yellowIG 0.3s ease-in-out, --yellow_toIG 0.3s ease-in-out;
+}
+
+.ig-icon:hover,
+.ig-icon:focus {
+  --blueIG: #3051f1;
+  --purpleIG: #c92bb7;
+  --redIG: #f73344;
+  --orangeIG: #fa8e37;
+  --yellowIG: #fcdf8f;
+  --yellow_toIG: #fbd377;
+}
+
+.back-to-top-button {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}

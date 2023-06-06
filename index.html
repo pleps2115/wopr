@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ratownictwo wodne</title>
+    <title>Niewolnictwo wodne</title>
     <!-- Bootstrap links -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -21,9 +21,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
+    <!-- Styles -->
     <link rel="stylesheet" href="./style/reset.css" />
     <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/footer.css" />
+    <!-- Scripts -->
     <script src="./js/main.js" defer></script>
+    <script src="./js/backToTopButton.js" defer></script>
   </head>
   <body>
     <header>
@@ -55,12 +59,14 @@
               <a>Sprzęt</a>
             </li>
             <li class="menu-element home-li">
-              <a href="/" class="home">WOPR</a>
+              <a href="/" class="home">
+                <img src="./icons/logo.svg" width="100px" alt="" class="logo" />
+              </a>
             </li>
             <li class="menu-element temat3">
-              <a>Bezpieczeństwo</a>
+              <a>Węzły</a>
             </li>
-            <li class="menu-element">
+            <li class="menu-element temat4">
               <a class="contact">Kontakt</a>
             </li>
           </ul>
@@ -79,7 +85,7 @@
       <div class="topics">
         <div class="topic topic1">
           <div class="icon icon-holowanie">
-            <img src="./icons/drawing1.svg"/>
+            <img src="./icons/drawing1.svg" />
           </div>
           <div class="description">
             <p>STYLE HOLOWANIA</p>
@@ -87,7 +93,7 @@
         </div>
         <div class="topic topic2">
           <div class="icon icon-parasolka">
-            <img src="./icons/parasolka2.svg"/>
+            <img src="./icons/parasolka2.svg" />
           </div>
           <div class="description">
             <p>EDUKACJA</p>
@@ -95,7 +101,7 @@
         </div>
         <div class="topic topic3">
           <div class="icon icon-pamelka">
-            <img src="./icons/pamlka2.svg"/>
+            <img src="./icons/pamlka2.svg" />
           </div>
           <div class="description">
             <p>SPRZĘT</p>
@@ -128,7 +134,7 @@
           </p>
         </div>
       </div>
-      <div class="wezly">
+      <div class="wezly-container">
         <div class="element wezel1 shadow">
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda
@@ -155,43 +161,141 @@
         </div>
       </div>
       <div class="sprzet-container" id="sprzet">
-        <div class="sprzet-element sprzet1">
+        <button class="sprzet-element sprzet1">
           <div class="card">
             <div class="front">
               <div class="icon">
-                <img src="./icons/wegorz1.svg" width="125px" alt="">
+                <img src="./icons/wegorz1.svg" alt="" />
               </div>
             </div>
             <div class="back">
-              <p>aaaaaaaa</p>
+              <div class="back-header">Pas Ratowniczy "WĘGORZ"</div>
+              <div class="back-description">
+                To rewolucyjne urządzenie, które zostało zaprojektowane
+                specjalnie w celu ratowania tonących. Wykorzystując elastyczność
+                i gibkość węża, pas zapewnia niezawodne wsparcie i stabilność
+                podczas akcji ratunkowej. Dzięki połączeniu natury i nowoczesnej
+                technologii, pas ratowniczy węgorz przynosi nowe rozwiązania i
+                zwiększa szanse na uratowanie życia w wodzie.
+              </div>
             </div>
           </div>
-        </div>
-        
-        
-        <div class="sprzet-element sprzet2"></div>
-        <div class="sprzet-element sprzet3"></div>
-        <div class="sprzet-element sprzet4"></div>
-        <div class="sprzet-element sprzet5"></div>
-        <div class="sprzet-element sprzet6"></div>
-      </div>
-      <!-- Back to top button -->
-      <div class="d-flex justify-content-end fixed-bottom">
-        <button
-          type="button"
-          class="back-to-top-button btn btn-warning rounded-circle"
-        >
-          <i class="bi bi-arrow-up"></i>
+        </button>
+        <button class="sprzet-element sprzet2">
+          <div class="card">
+            <div class="front">
+              <div class="icon">
+                <img src="./icons/spodenki.svg" alt="" />
+              </div>
+            </div>
+            <div class="back">
+              <div class="back-header">Kąpielówki</div>
+              <div class="back-description">
+                Kąpielówki ratownika to niezwykle istotny element wyposażenia,
+                który chroni i ułatwia pracę ratownikom na plażach i basenach.
+                Ich wytrzymały materiał i jaskrawy kolor zapewniają widoczność,
+                co pomaga w szybkim odnalezieniu ratownika w sytuacji
+                zagrożenia. Kąpielówki ratownika są projektowane tak, aby
+                zapewnić swobodę ruchów i wygodę podczas wykonywania skoków do
+                wody i ratowania osób. To kluczowy element, który przyczynia się
+                do bezpieczeństwa na kąpieliskach.
+              </div>
+            </div>
+          </div>
+        </button>
+        <button class="sprzet-element sprzet3">
+          <div class="card">
+            <div class="front">
+              <div class="icon">
+                <img src="./icons/gwizdek1.svg" alt="" />
+              </div>
+            </div>
+            <div class="back">
+              <div class="back-header">Gwizdek</div>
+              <div class="back-description">
+                Gwizdek ratownika - malutki instrument, wielka moc. Jego dźwięk
+                przecina hałas i wzywa pomoc. W rękach odpowiedzialnego
+                ratownika staje się symbolem nadziei i bezpieczeństwa. To
+                prosty, ale niezwykle skuteczny sposób, aby dotrzeć do
+                potrzebujących pomocy. Gwizdek ratownika - mały, ale potężny
+                środek łączności wśród chaosu.
+              </div>
+            </div>
+          </div>
+        </button>
+        <button class="sprzet-element sprzet4">
+          <div class="card">
+            <div class="front">
+              <div class="icon">
+                <img src="./icons/krotkofalowka.svg" alt="" />
+              </div>
+            </div>
+            <div class="back">
+              <div class="back-header">Krótkofalówka</div>
+              <div class="back-description">
+                Radio ratownika to niezbędne narzędzie w sytuacjach awaryjnych.
+                Dzięki swojej kompaktowej konstrukcji i bezprzewodowej
+                komunikacji umożliwia szybkie i skuteczne działanie. Pozwala na
+                szybkie przekazywanie informacji o zagrożeniach, koordynowanie
+                działań ratunkowych i utrzymywanie kontaktu zespołu.
+                Krótkofalówka ratownika to nieocenione wsparcie w ratowaniu
+                życia.
+              </div>
+            </div>
+          </div>
+        </button>
+        <button class="sprzet-element sprzet5">
+          <div class="card">
+            <div class="front">
+              <div class="icon">
+                <img src="./icons/apteczka.svg" alt="" />
+              </div>
+            </div>
+            <div class="back">
+              <div class="back-header">Apteczka</div>
+              <div class="back-description">
+                To niezbędne narzędzie w sytuacjach awaryjnych. Zawiera
+                podstawowe środki i sprzęt potrzebne do udzielenia pierwszej
+                pomocy. Jej kompaktowy rozmiar pozwala na przenoszenie jej
+                wszędzie, co czyni ją nieocenioną w przypadku nagłych wypadków.
+                Apteczka ratownika może być kluczowa w ocaleniu życia i
+                złagodzeniu skutków obrażeń przed przybyciem profesjonalnej
+                pomocy medycznej.
+              </div>
+            </div>
+          </div>
+        </button>
+        <button class="sprzet-element sprzet6">
+          <div class="card">
+            <div class="front">
+              <div class="icon">
+                <img src="./icons/kolo.svg" alt="" />
+              </div>
+            </div>
+            <div class="back">
+              <div class="back-header">Koło ratunkowe</div>
+              <div class="back-description">
+                Jest to niezbędne narzędzie bezpieczeństwa na wodzie. Jest to
+                pływający pierścień, który może być rzucany osobie znajdującej
+                się w wodzie w celu udzielenia pomocy. Dzięki swojemu kształtowi
+                i materiałowi, koło ratunkowe zapewnia pływalność i umożliwia
+                osobie w potrzebie złapanie go i utrzymanie się na powierzchni
+                wody. Jest to prosty, ale skuteczny sposób, aby zapewnić
+                bezpieczeństwo podczas sytuacji awaryjnych na wodzie.
+              </div>
+            </div>
+          </div>
         </button>
       </div>
     </main>
     <footer>
-      <div class="odnosniki">
+      <!-- Social media links -->
+      <div class="social-media-links d-flex justify-content-center p-4">
         <a
           href="https://github.com/pleps2115/wopr"
           target="_blank"
           title="Repozytorium"
-          class="github-icon"
+          class="github-icon m-3 p-3 border rounded-circle"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -210,7 +314,7 @@
           href="https://discord.gg/3EdgeBbv"
           target="_blank"
           title="Dołącz do naszego discorda!"
-          class="dsc-icon"
+          class="dsc-icon m-3 p-3 border rounded-circle"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -229,7 +333,7 @@
           href="https://www.instagram.com/microsoft/"
           target="_blank"
           title="Instagram"
-          class="ig-icon"
+          class="ig-icon m-3 p-3 border rounded-circle"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -246,5 +350,14 @@
         </a>
       </div>
     </footer>
+    <!-- Back to top button -->
+    <div class="d-flex justify-content-end fixed-bottom">
+      <button
+        type="button"
+        class="back-to-top-button btn btn-warning rounded-circle"
+      >
+        <i class="bi bi-arrow-up"></i>
+      </button>
+    </div>
   </body>
 </html>

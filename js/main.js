@@ -1,30 +1,3 @@
-// Back to top button
-const button = document.querySelector(".back-to-top-button");
-
-window.onscroll = () => {
-  showButtonOnScroll();
-};
-
-function showButtonOnScroll() {
-  if (
-    document.body.scrollTop > 300 ||
-    document.documentElement.scrollTop > 300
-  ) {
-    button.style.visibility = "visible";
-    button.style.opacity = "1";
-  } else {
-    button.style.opacity = "0";
-    button.style.visibility = "hidden";
-  }
-}
-
-button.addEventListener("click", backToTop);
-
-function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
 // progress bar
 const body = document.body;
 const bar = document.querySelector(".bar");
@@ -49,7 +22,7 @@ window.addEventListener("scroll", function () {
       if (position < windowHeight - topic.offsetHeight) {
         setTimeout(function () {
           topic.classList.add("visible");
-        }, index * 200); // Opóźnienie animacji w milisekundach
+        }, index * 100); // Opóźnienie animacji w milisekundach
       }
     })(i);
   }
@@ -57,15 +30,36 @@ window.addEventListener("scroll", function () {
 
 // topic1 przeniesienie
 let temat1 = document.querySelector(".topic1");
+let temat11 = document.querySelector(".temat1");
 let holowanie = document.querySelector(".holowanie");
 
-temat1.addEventListener("click", _=> {
+temat1.addEventListener("click", (_) => {
   holowanie.scrollIntoView({ behavior: "smooth" });
 });
+temat11.addEventListener("click", (_) => {
+  holowanie.scrollIntoView({ behavior: "smooth" });
+});
+
+// topic2 przeniesienie
+let temat2 = document.querySelector(".topic2");
+let temat22 = document.querySelector(".temat3");
+let wezly = document.querySelector(".wezly-container");
+
+temat2.addEventListener("click", (_) => {
+  wezly.scrollIntoView({ behavior: "smooth" });
+});
+temat22.addEventListener("click", (_) => {
+  wezly.scrollIntoView({ behavior: "smooth" });
+});
+
 // topic3 przeniesienie
 let temat3 = document.querySelector(".topic3");
+let temat33 = document.querySelector(".temat2");
 let sprzet = document.querySelector(".sprzet-container");
 
-temat3.addEventListener("click", _=> {
+temat3.addEventListener("click", (_) => {
+  sprzet.scrollIntoView({ behavior: "smooth" });
+});
+temat33.addEventListener("click", (_) => {
   sprzet.scrollIntoView({ behavior: "smooth" });
 });
