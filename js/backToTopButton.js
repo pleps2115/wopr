@@ -28,3 +28,10 @@ function backToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+//dodanie efektu dżwiękowego 
+let audio = new Audio("./media/bable.mp3");
+button.addEventListener("click",_=>{
+  audio.play();
+});
