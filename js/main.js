@@ -22,7 +22,7 @@ window.addEventListener("scroll", function () {
       if (position < windowHeight - topic.offsetHeight) {
         setTimeout(function () {
           topic.classList.add("visible");
-        }, index * 100); // Opóźnienie animacji w milisekundach
+        }, index * 100); 
       }
     })(i);
   }
@@ -62,4 +62,46 @@ temat3.addEventListener("click", (_) => {
 });
 temat33.addEventListener("click", (_) => {
   sprzet.scrollIntoView({ behavior: "smooth" });
+});
+
+//tematy opacity 
+window.addEventListener("scroll",_=>{
+  let holowanie = document.querySelector(".holowanie");
+  let holowaniePosition = holowanie.getBoundingClientRect();
+
+  let wezly = document.querySelector(".wezly-container");
+  let wezlyPosition = wezly.getBoundingClientRect();
+
+  let sprzet = document.querySelector(".sprzet-container");
+  let sprzetPosition = sprzet.getBoundingClientRect();
+
+  let wysokosc = window.innerHeight;
+
+  setTimeout(_=>{
+    if(holowaniePosition.top <= wysokosc){
+      holowanie.style.opacity = "1";
+    }
+    else{
+      holowanie.style.opacity = "0";
+    }
+
+    if(wezlyPosition.top <= wysokosc){
+      wezly.style.opacity = "1";
+    }
+    else{
+      wezly.style.opacity = "0";
+    }
+
+    if(sprzetPosition.top <= wysokosc){
+      sprzet.style.opacity = "1";
+    }
+    else{
+      sprzet.style.opacity = "0";
+    }
+  });
+
+holowanie.style.transition = "opacity 3s";
+wezly.style.transition = "opacity 3s";
+sprzet.style.transition = "opacity 3s";
+
 });
