@@ -1,4 +1,4 @@
-// progress bar
+// Progress bar
 const body = document.body;
 const bar = document.querySelector(".bar");
 const Update = () => {
