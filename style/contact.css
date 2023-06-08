@@ -68,21 +68,18 @@ textarea {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 800px) {
-  .form {
-    width: 90%;
-  }
-  form {
-    width: 100%;
-    padding: 1vw;
-  }
-  .container {
-    width: 100%;
-  }
-  .temat1,
-  .temat2,
-  .temat3,
-  .temat4 {
-    display: flex;
-  }
+@media (max-width:800px){
+    .form{
+        width: 90%;
+    }
+    form{
+        width: 100%;
+        padding: 1vw;
+    }
+    .container{
+        width: 100%;
+    }
+    .temat1,.temat2,.temat3,.temat4{
+        display: flex;
+    }
 }

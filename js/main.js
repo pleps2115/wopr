@@ -50,6 +50,11 @@ temat3.addEventListener("click", (_) => {
 temat33.addEventListener("click", (_) => {
   sprzet.scrollIntoView({ behavior: "smooth" });
 });
+// topic 4
+let temat4 = document.querySelector(".temat4");
+temat4.addEventListener("click",_=>{
+  window.location.href="./contact/contact.html";
+})
 
 // Progress bar
 const body = document.body;
