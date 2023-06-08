@@ -52,9 +52,9 @@ temat33.addEventListener("click", (_) => {
 });
 // topic 4
 let temat4 = document.querySelector(".temat4");
-temat4.addEventListener("click",_=>{
-  window.location.href="./contact/contact.html";
-})
+temat4.addEventListener("click", (_) => {
+  window.location.href = "./contact/contact.html";
+});
 
 // Progress bar
 const body = document.body;
@@ -131,7 +131,7 @@ window.addEventListener("scroll", (_) => {
   let holowanie = document.querySelector(".holowanie");
   let holowaniePosition = holowanie.getBoundingClientRect();
 
-  let wezly = document.querySelector(".wezly-container");
+  let wezly = document.querySelector(".knots-container");
   let wezlyPosition = wezly.getBoundingClientRect();
 
   let sprzet = document.querySelector(".sprzet-container");
@@ -148,11 +148,4 @@ window.addEventListener("scroll", (_) => {
   });
 
   wezly.style.transition = "opacity 3s";
-});
-
-// Social media links sound effect
-const socialMediaLinks = document.querySelectorAll(".social-media-link");
-const socialMediaAudio = new Audio("./media/element-click-sound-effect.wav");
-socialMediaLinks.forEach((option) => {
-  option.addEventListener("click", () => playAudio(socialMediaAudio));
 });

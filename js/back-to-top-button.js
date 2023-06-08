@@ -1,3 +1,8 @@
+// Play audio function
+function playAudio(audioName) {
+  audioName.play();
+}
+
 // Homepage scroll
 const homepageLink = document.querySelector("#homepage");
 homepageLink.addEventListener("click", backToTop);
@@ -33,4 +38,11 @@ function backToTop() {
 let audio = new Audio("../media/bable.mp3");
 button.addEventListener("click", (_) => {
   audio.play();
+});
+
+// Social media links sound effect
+const socialMediaLinks = document.querySelectorAll(".social-media-link");
+const socialMediaAudio = new Audio("/media/element-click-sound-effect.wav");
+socialMediaLinks.forEach((option) => {
+  option.addEventListener("click", () => playAudio(socialMediaAudio));
 });

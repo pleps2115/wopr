@@ -55,7 +55,7 @@
   width: 100%;
   position: relative;
   border: 8px solid var(--grey);
-  border-radius: 10px;
+  border-radius: 16px;
 }
 
 @media (max-width: 1010px) {
