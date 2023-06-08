@@ -1,0 +1,7 @@
+.knots-container {
+  background-color: var(--dark);
+}
+
+.knot {
+  background-color: var(--grey);
+}

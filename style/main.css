@@ -7,11 +7,13 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 *,
-header {
+body {
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth !important;
+}
+
+header {
   list-style: none;
-  text-decoration: none;
 }
 
 * {
@@ -400,29 +402,6 @@ header {
 .description {
   color: var(--grey);
   padding: 40px;
-}
-
-/* wezły */
-.wezly-container {
-  background-color: var(--dark);
-  padding: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.wezly-container > .element {
-  background-color: var(--grey);
-  margin: 50px;
-  border-radius: 10px;
-  padding: 20px;
-  color: black;
-  width: 70%;
-  display: flex;
-}
-
-.wezly-container > .wezel2 {
-  margin-left: auto;
 }
 
 /* sprzęt */

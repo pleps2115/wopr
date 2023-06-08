@@ -30,7 +30,7 @@ temat11.addEventListener("click", (_) => {
 // topic2 przeniesienie
 let temat2 = document.querySelector(".topic2");
 let temat22 = document.querySelector(".temat2");
-let wezly = document.querySelector(".wezly-container");
+let wezly = document.querySelector(".knots-container");
 
 temat2.addEventListener("click", (_) => {
   wezly.scrollIntoView({ behavior: "smooth" });

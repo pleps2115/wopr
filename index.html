@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="./style/reset.css" />
     <link rel="stylesheet" href="./style/main.css" />
     <link rel="stylesheet" href="./style/holowanie.css" />
+    <link rel="stylesheet" href="./style/wezly.css" />
     <link rel="stylesheet" href="./style/footer.css" />
     <!-- Scripts -->
     <script src="./js/main.js" defer></script>
@@ -221,30 +222,34 @@
           </div>
         </div>
       </div>
-      <div class="wezly-container">
-        <div class="element wezel1 shadow">
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda
-            ipsam dolor earum consequuntur esse cumque fugit! Quam temporibus
-            doloremque rem voluptatem quaerat ad eligendi, ratione incidunt
-            reprehenderit cumque quia quo.
-          </p>
-        </div>
-        <div class="element wezel2 shadow">
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quos
-            natus beatae harum quaerat ea nulla suscipit excepturi, blanditiis,
-            aspernatur dolorem corporis sit adipisci facere dicta! Autem dolorum
-            ullam officia.
-          </p>
-        </div>
-        <div class="element wezel3 shadow">
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Consectetur nisi ipsam deleniti, nemo soluta incidunt veritatis
-            error ab sunt consequatur eligendi accusantium quisquam deserunt at
-            fugit quibusdam officiis unde earum.
-          </p>
+      <!-- Knots videos -->
+      <div class="knots-container d-flex flex-column align-items-center p-5">
+        <span class="h1 text-white mb-5">W Ę Z Ł Y</span>
+        <div class="knots d-flex justify-content-around">
+          <div
+            class="knot w-25 d-flex flex-column align-items-center p-3 rounded"
+          >
+            <video autoplay muted loop class="knot-video w-100 mb-3">
+              <source src="./media/zmeczona.mp4" type="video/mp4" />
+            </video>
+            <span class="d-flex justify-content-center">Węzeł Ratowniczy</span>
+          </div>
+          <div
+            class="knot w-25 d-flex flex-column align-items-center p-3 rounded"
+          >
+            <video autoplay muted loop class="knot-video w-100 mb-3">
+              <source src="./media/zmeczona.mp4" type="video/mp4" />
+            </video>
+            <span class="d-flex justify-content-center">Węzeł Ratowniczy</span>
+          </div>
+          <div
+            class="knot w-25 d-flex flex-column justify-content-between align-items-center p-3 rounded"
+          >
+            <video autoplay muted loop class="knot-video w-100 mb-3">
+              <source src="./media/zmeczona.mp4" type="video/mp4" />
+            </video>
+            <span class="d-flex justify-content-center">Węzeł Ratowniczy</span>
+          </div>
         </div>
       </div>
       <div class="sprzet-container" id="sprzet">
@@ -446,7 +451,7 @@
     <div class="d-flex justify-content-end fixed-bottom">
       <button
         type="button"
-        class="back-to-top-button btn btn-warning rounded-circle"
+        class="back-to-top-button position-absolute btn btn-warning text-white rounded-circle"
       >
         <i class="bi bi-arrow-up"></i>
       </button>
