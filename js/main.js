@@ -28,6 +28,48 @@ window.addEventListener("scroll", function () {
   }
 });
 
+window.addEventListener("scroll", function(){
+  let holowanie = document.querySelectorAll(".element");
+  
+  for (let i = 0; i <= holowanie.length; i++) {
+    (function (index) {
+      let holowanieElement = holowanie[index];
+      let position = holowanieElement.getBoundingClientRect().top;
+      let windowHeight = window.innerHeight;
+
+      if (position < windowHeight - holowanieElement.offsetHeight) {
+        setTimeout(function () {
+          holowanieElement.classList.add("visible");
+        }, index * 150); 
+      }
+      else{
+        holowanieElement.classList.remove("visible");
+      }
+    })(i);
+  }
+});
+
+window.addEventListener("scroll", function(){
+  let sprzet = document.querySelectorAll(".sprzet-element");
+  
+  for (let i = 0; i < sprzet.length; i++) {
+    (function (index) {
+      let sprzetElement = sprzet[index];
+      let position = sprzetElement.getBoundingClientRect().top;
+      let windowHeight = window.innerHeight;
+
+      if (position <= windowHeight - sprzetElement.offsetHeight) {
+        setTimeout(function () {
+          sprzetElement.classList.add("visible");
+        }, index * 100); 
+      }
+      else{
+        sprzetElement.classList.remove("visible");
+      }
+    })(i);
+  }
+});
+
 // topic1 przeniesienie
 let temat1 = document.querySelector(".topic1");
 let temat11 = document.querySelector(".temat1");
@@ -78,30 +120,13 @@ window.addEventListener("scroll",_=>{
   let wysokosc = window.innerHeight;
 
   setTimeout(_=>{
-    if(holowaniePosition.top <= wysokosc){
-      holowanie.style.opacity = "1";
-    }
-    else{
-      holowanie.style.opacity = "0";
-    }
-
     if(wezlyPosition.top <= wysokosc){
       wezly.style.opacity = "1";
     }
     else{
       wezly.style.opacity = "0";
     }
-
-    if(sprzetPosition.top <= wysokosc){
-      sprzet.style.opacity = "1";
-    }
-    else{
-      sprzet.style.opacity = "0";
-    }
   });
 
-holowanie.style.transition = "opacity 3s";
 wezly.style.transition = "opacity 3s";
-sprzet.style.transition = "opacity 3s";
-
 });
