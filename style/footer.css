@@ -78,6 +78,7 @@
 }
 
 .back-to-top-button {
+  position: fixed;
   width: 70px;
   height: 70px;
   right: 25px;
