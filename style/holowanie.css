@@ -54,7 +54,7 @@
   height: auto;
   width: 100%;
   position: relative;
-  border: 9px solid var(--grey);
+  border: 8px solid var(--grey);
   border-radius: 10px;
 }
 
