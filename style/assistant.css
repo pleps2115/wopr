@@ -1,5 +1,8 @@
 .assistant-container {
   width: 23vw;
+  transition: opacity .5s ease-in;
+  opacity: 0;
+  visibility: hidden;
 }
 .assistant-photo {
   width: 3vw;

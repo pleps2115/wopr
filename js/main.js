@@ -1,3 +1,11 @@
+// Assistant appear
+const assistant = document.querySelector(".assistant-container");
+setTimeout(() => {
+  assistant.style.visibility = "visible";
+  assistant.style.opacity = "1";
+}, "3000");
+assistant.addEventListener
+
 // Play audio function
 function playAudio(audioName) {
   audioName.play();
