@@ -1,2 +1,2 @@
-Ja nawet nie umiem pływać, a pracuję w WOPRZE
-                                    Bartosz W
+Wszystkie ikonki oprócz ikon mediów społecznościowych wykonaliśmy sami w Inkscape.
+Film z drona, filmy z holowania i węzłów także nakręciliśmy sami.

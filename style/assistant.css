@@ -1,6 +1,6 @@
 .assistant-container {
   width: 23vw;
-  transition: opacity .5s ease-in;
+  transition: opacity 0.5s ease-in;
   opacity: 0;
   visibility: hidden;
 }
@@ -10,4 +10,10 @@
 }
 .assistant-message {
   background-color: #0084ff;
+}
+
+@media (max-width: 842px) {
+  .assistant-container {
+    display: none;
+  }
 }

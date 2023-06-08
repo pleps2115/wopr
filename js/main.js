@@ -3,8 +3,12 @@ const assistant = document.querySelector(".assistant-container");
 setTimeout(() => {
   assistant.style.visibility = "visible";
   assistant.style.opacity = "1";
-}, "3000");
-assistant.addEventListener
+  setTimeout(() => {
+    button.style.opacity = "0";
+    button.style.visibility = "hidden";
+  }, "30000");
+}, "15000");
+assistant.addEventListener;
 
 // Play audio function
 function playAudio(audioName) {
