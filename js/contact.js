@@ -8,13 +8,3 @@ const Update = () => {
   requestAnimationFrame(Update);
 };
 Update();
-
-// efekt na kotwicę
-let home = document.querySelector(".home-li");
-let audio3 = new Audio("../media/kotwica.mp3");
-home.addEventListener("mouseover", (_) => {
-  audio3.play();
-});
-
-
-
