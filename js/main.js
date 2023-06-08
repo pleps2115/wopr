@@ -134,7 +134,7 @@ wezly.style.transition = "opacity 3s";
 
 // efekt na kotwicę
 let home = document.querySelector(".home-li");
-let audio = new Audio("./media/kotwica.mp3");
+let audio2 = new Audio("./media/kotwica.mp3");
 home.addEventListener("mouseover",_=>{
-  audio.play();
+  audio2.play();
 });
