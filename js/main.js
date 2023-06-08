@@ -37,7 +37,7 @@ window.addEventListener("scroll", function(){
       let position = holowanieElement.getBoundingClientRect().top;
       let windowHeight = window.innerHeight;
 
-      if (position < windowHeight - holowanieElement.offsetHeight) {
+      if (position < windowHeight - holowanieElement.offsetHeight + 300) {
         setTimeout(function () {
           holowanieElement.classList.add("visible");
         }, index * 150); 
@@ -58,7 +58,7 @@ window.addEventListener("scroll", function(){
       let position = sprzetElement.getBoundingClientRect().top;
       let windowHeight = window.innerHeight;
 
-      if (position <= windowHeight - sprzetElement.offsetHeight) {
+      if (position <= windowHeight - sprzetElement.offsetHeight + 200) {
         setTimeout(function () {
           sprzetElement.classList.add("visible");
         }, index * 100); 
