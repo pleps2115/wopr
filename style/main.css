@@ -402,7 +402,6 @@ header {
   padding: 40px;
 }
 
-
 /* wezły */
 .wezly-container {
   background-color: var(--dark);
@@ -433,6 +432,7 @@ header {
   flex-wrap: wrap;
   flex-direction: column;
 }
+
 .part {
   display: flex;
   justify-content: space-around;
@@ -451,11 +451,13 @@ header {
   margin: 20px;
   padding: 0;
 }
+
 .sprzet-element {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
 .sprzet-element.visible {
   opacity: 1;
   transform: translateY(0);

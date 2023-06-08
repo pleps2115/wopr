@@ -1,74 +1,19 @@
-// progress bar
-const body = document.body;
-const bar = document.querySelector(".bar");
-const Update = () => {
-  let scroll =
-    (window.scrollY / (body.scrollHeight - window.innerHeight)) * 100;
-  bar.style.width = `${scroll}%`;
-  requestAnimationFrame(Update);
-};
-Update();
+// Play audio function
+function playAudio(audioName) {
+  audioName.play();
+}
 
-// karty
-window.addEventListener("scroll", function () {
-  let topics = document.querySelectorAll(".topic");
-
-  for (let i = 0; i < topics.length; i++) {
-    (function (index) {
-      let topic = topics[index];
-      let position = topic.getBoundingClientRect().top;
-      let windowHeight = window.innerHeight;
-
-      if (position < windowHeight - topic.offsetHeight) {
-        setTimeout(function () {
-          topic.classList.add("visible");
-        }, index * 100); 
-      }
-    })(i);
-  }
+// Menu options sound effect
+const menuOptions = document.querySelectorAll(".menu-option");
+const menuOptionsAudio = new Audio("./media/menu-click-sound-effect.wav");
+menuOptions.forEach((option) => {
+  option.addEventListener("click", () => playAudio(menuOptionsAudio));
 });
 
-window.addEventListener("scroll", function(){
-  let holowanie = document.querySelectorAll(".element");
-  
-  for (let i = 0; i <= holowanie.length; i++) {
-    (function (index) {
-      let holowanieElement = holowanie[index];
-      let position = holowanieElement.getBoundingClientRect().top;
-      let windowHeight = window.innerHeight;
-
-      if (position < windowHeight - holowanieElement.offsetHeight + 300) {
-        setTimeout(function () {
-          holowanieElement.classList.add("visible");
-        }, index * 150); 
-      }
-      else{
-        holowanieElement.classList.remove("visible");
-      }
-    })(i);
-  }
-});
-
-window.addEventListener("scroll", function(){
-  let sprzet = document.querySelectorAll(".sprzet-element");
-  
-  for (let i = 0; i < sprzet.length; i++) {
-    (function (index) {
-      let sprzetElement = sprzet[index];
-      let position = sprzetElement.getBoundingClientRect().top;
-      let windowHeight = window.innerHeight;
-
-      if (position <= windowHeight - sprzetElement.offsetHeight + 200) {
-        setTimeout(function () {
-          sprzetElement.classList.add("visible");
-        }, index * 100); 
-      }
-      else{
-        sprzetElement.classList.remove("visible");
-      }
-    })(i);
-  }
-});
+// Home option sound effect
+const home = document.querySelector(".home-li");
+const goHomeAudio = new Audio("./media/kotwica.mp3");
+home.addEventListener("click", () => playAudio(goHomeAudio));
 
 // topic1 przeniesienie
 let temat1 = document.querySelector(".topic1");
@@ -106,8 +51,78 @@ temat33.addEventListener("click", (_) => {
   sprzet.scrollIntoView({ behavior: "smooth" });
 });
 
-//tematy opacity 
-window.addEventListener("scroll",_=>{
+// Progress bar
+const body = document.body;
+const bar = document.querySelector(".bar");
+const Update = () => {
+  let scroll =
+    (window.scrollY / (body.scrollHeight - window.innerHeight)) * 100;
+  bar.style.width = `${scroll}%`;
+  requestAnimationFrame(Update);
+};
+Update();
+
+// karty
+window.addEventListener("scroll", function () {
+  let topics = document.querySelectorAll(".topic");
+
+  for (let i = 0; i < topics.length; i++) {
+    (function (index) {
+      let topic = topics[index];
+      let position = topic.getBoundingClientRect().top;
+      let windowHeight = window.innerHeight;
+
+      if (position < windowHeight - topic.offsetHeight) {
+        setTimeout(function () {
+          topic.classList.add("visible");
+        }, index * 100);
+      }
+    })(i);
+  }
+});
+
+window.addEventListener("scroll", function () {
+  let holowanie = document.querySelectorAll(".element");
+
+  for (let i = 0; i <= holowanie.length; i++) {
+    (function (index) {
+      let holowanieElement = holowanie[index];
+      let position = holowanieElement.getBoundingClientRect().top;
+      let windowHeight = window.innerHeight;
+
+      if (position < windowHeight - holowanieElement.offsetHeight + 300) {
+        setTimeout(function () {
+          holowanieElement.classList.add("visible");
+        }, index * 150);
+      } else {
+        holowanieElement.classList.remove("visible");
+      }
+    })(i);
+  }
+});
+
+window.addEventListener("scroll", function () {
+  let sprzet = document.querySelectorAll(".sprzet-element");
+
+  for (let i = 0; i < sprzet.length; i++) {
+    (function (index) {
+      let sprzetElement = sprzet[index];
+      let position = sprzetElement.getBoundingClientRect().top;
+      let windowHeight = window.innerHeight;
+
+      if (position <= windowHeight - sprzetElement.offsetHeight + 200) {
+        setTimeout(function () {
+          sprzetElement.classList.add("visible");
+        }, index * 100);
+      } else {
+        sprzetElement.classList.remove("visible");
+      }
+    })(i);
+  }
+});
+
+// tematy opacity
+window.addEventListener("scroll", (_) => {
   let holowanie = document.querySelector(".holowanie");
   let holowaniePosition = holowanie.getBoundingClientRect();
 
@@ -119,22 +134,20 @@ window.addEventListener("scroll",_=>{
 
   let wysokosc = window.innerHeight;
 
-  setTimeout(_=>{
-    if(wezlyPosition.top <= wysokosc){
+  setTimeout((_) => {
+    if (wezlyPosition.top <= wysokosc) {
       wezly.style.opacity = "1";
-    }
-    else{
+    } else {
       wezly.style.opacity = "0";
     }
   });
 
-wezly.style.transition = "opacity 3s";
+  wezly.style.transition = "opacity 3s";
 });
 
-
-// efekt na kotwicę
-let home = document.querySelector(".home-li");
-let audio2 = new Audio("./media/kotwica.mp3");
-home.addEventListener("mouseover",_=>{
-  audio2.play();
+// Social media links sound effect
+const socialMediaLinks = document.querySelectorAll(".social-media-link");
+const socialMediaAudio = new Audio("./media/element-click-sound-effect.wav");
+socialMediaLinks.forEach((option) => {
+  option.addEventListener("click", () => playAudio(socialMediaAudio));
 });

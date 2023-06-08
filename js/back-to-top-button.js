@@ -29,9 +29,8 @@ function backToTop() {
   document.documentElement.scrollTop = 0;
 }
 
-
-//dodanie efektu dżwiękowego 
+// Back to top button sound effect
 let audio = new Audio("../media/bable.mp3");
-button.addEventListener("click",_=>{
+button.addEventListener("click", (_) => {
   audio.play();
 });

@@ -9,6 +9,12 @@ const Update = () => {
 };
 Update();
 
+// efekt na kotwicę
+let home = document.querySelector(".home-li");
+let audio3 = new Audio("../media/kotwica.mp3");
+home.addEventListener("mouseover", (_) => {
+  audio3.play();
+});
 
 // // topic1 przeniesienie
 // let temat1 = document.querySelector(".topic1");
@@ -45,12 +51,3 @@ Update();
 // temat33.addEventListener("click", (_) => {
 //   sprzet.scrollIntoView({ behavior: "smooth" });
 // });
-
-
-
-// efekt na kotwicę
-let home = document.querySelector(".home-li");
-let audio3 = new Audio("../media/kotwica.mp3");
-home.addEventListener("mouseover",_=>{
-    audio3.play();
-});
