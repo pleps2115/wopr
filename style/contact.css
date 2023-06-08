@@ -79,7 +79,8 @@ textarea {
     .container{
         width: 100%;
     }
-    .temat1,.temat2,.temat3,.temat4{
-        display: flex;
-    }
+    .container-header{
+      display: flex;
+      justify-content: center;
+  }
 }
