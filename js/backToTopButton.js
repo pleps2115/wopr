@@ -31,7 +31,7 @@ function backToTop() {
 
 
 //dodanie efektu dżwiękowego 
-let audio = new Audio("./media/bable.mp3");
+let audio = new Audio("../media/bable.mp3");
 button.addEventListener("click",_=>{
   audio.play();
 });
